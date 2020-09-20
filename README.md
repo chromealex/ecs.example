@@ -1,2 +1,2 @@
-# ecs.example
-ME.ECS Game Example
+# Example Project
+ME.ECS Game Example (https://github.com/chromealex/ecs)
