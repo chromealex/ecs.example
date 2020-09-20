@@ -130,6 +130,8 @@ namespace Example.Modules {
             
             base.OnDisconnected(cause);
 
+            if (UnityEngine.Application.isPlaying == false) return;
+            
             UnityEngine.Debug.Log("Disconnected because of " + cause);
 
             var go = UnityEngine.GameObject.Find("ExampleInitializer");
@@ -318,6 +320,7 @@ namespace Example.Modules {
 
                     // Turn off this check to run game locally without awaiting for other player to join
                     if (Photon.Pun.PhotonNetwork.CurrentRoom.PlayerCount == 2) {
+                    //{
 
                         this.timeSyncedConnected = true;
                         

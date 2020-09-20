@@ -60,10 +60,18 @@ namespace Example.Features.PlayerFire.Systems {
 
             if (fly.timer >= 1f) {
 
+                var force = new Entity("Force");
+                force.SetPosition(res);
+                force.SetData(new Example.Features.Logic.ForceAtPoint.Components.AddForce() {
+                    value = this.feature.explosionForce,
+                    range = this.feature.explosionRange,
+                    time = this.feature.effectTime
+                });
+                
                 var effect = new Entity("BulletEffect");
                 effect.SetPosition(res);
                 effect.SetData(new Example.Features.Logic.DestroyByTime.Components.DestroyByTime() {
-                    time = 3f
+                    time = this.feature.effectTime
                 });
                 effect.InstantiateView(this.feature.bulletEffectViewId);
                 

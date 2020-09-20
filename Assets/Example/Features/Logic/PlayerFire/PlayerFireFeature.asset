@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: PlayerFireFeature
   m_EditorClassIdentifier: 
   editorComment: 
+  explosionForce: 1
+  explosionRange: 2
+  effectTime: 1
   bulletSpeed: 3
   shootDistance: 4
   bulletView: {fileID: 2583333092762902104, guid: 256555b501d4c497291bfb9260adc261,

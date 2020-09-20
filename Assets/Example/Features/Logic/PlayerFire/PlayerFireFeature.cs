@@ -17,6 +17,10 @@ namespace Example.Features {
     #endif
     public sealed class PlayerFireFeature : Feature {
 
+        public float explosionForce;
+        public float explosionRange;
+        public float effectTime = 3f;
+        
         public float bulletSpeed;
         public float shootDistance;
         
