@@ -4,6 +4,7 @@ ME.ECS Game Example (https://github.com/chromealex/ecs)
 ## How to install
 * Checkout or download repo
 * Open in Unity Editor (Tested in Unity 2019.4.10f1)
+* Open "Main" scene
 * Press "Play" and Photon will show you steps to set up photon server settings
 * Set up PhotonServerSettings (You need to enter your app id)
 * Build the game
