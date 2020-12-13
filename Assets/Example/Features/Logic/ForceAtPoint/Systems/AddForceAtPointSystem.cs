@@ -45,7 +45,7 @@ namespace Example.Features.Logic.ForceAtPoint.Systems {
             var sqrForceRange = force.range * force.range;
             
             var pos = entity.GetPosition();
-            foreach (ref var player in this.allPlayers) {
+            foreach (var player in this.allPlayers) {
 
                 var p = player.GetPosition();
                 if ((p - pos).sqrMagnitude <= sqrForceRange) {
@@ -59,7 +59,7 @@ namespace Example.Features.Logic.ForceAtPoint.Systems {
 
             }
 
-            this.world.RemoveEntity(entity);
+            entity.Destroy();
 
         }
     

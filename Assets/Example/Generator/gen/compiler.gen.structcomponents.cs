@@ -2,8 +2,9 @@ namespace ME.ECS {
 
     public static partial class ComponentsInitializer {
     
-        public static void InitTypeId() {
+        static partial void InitTypeIdPartial() {
             
+            WorldUtilities.ResetTypeIds();
             CoreComponentsInitializer.InitTypeId();
             
 
@@ -22,6 +23,21 @@ namespace ME.ECS {
         
         static partial void Init(ref ME.ECS.StructComponentsContainer structComponentsContainer) {
     
+            WorldUtilities.ResetTypeIds();
+            CoreComponentsInitializer.InitTypeId();
+            
+
+            WorldUtilities.InitComponentTypeId<Example.Features.Players.Components.IsPlayer>(true);
+            WorldUtilities.InitComponentTypeId<Example.Features.Map.Components.IsMap>(true);
+            WorldUtilities.InitComponentTypeId<Example.Features.PlayerMovement.Components.LastMovementDirection>(false);
+            WorldUtilities.InitComponentTypeId<Example.Features.PlayerMovement.Components.MoveAction>(false);
+            WorldUtilities.InitComponentTypeId<Example.Features.PlayerFire.Components.FireAction>(true);
+            WorldUtilities.InitComponentTypeId<Example.Features.PlayerFire.Components.IsBullet>(false);
+            WorldUtilities.InitComponentTypeId<Example.Features.PlayerFire.Components.BulletFly>(false);
+            WorldUtilities.InitComponentTypeId<Example.Features.Logic.ForceAtPoint.Components.AddForce>(false);
+            WorldUtilities.InitComponentTypeId<Example.Features.Logic.ForceAtPoint.Components.Force>(false);
+            WorldUtilities.InitComponentTypeId<Example.Features.Logic.DestroyByTime.Components.DestroyByTime>(false);
+
             ComponentsInitializerWorld.Setup(ComponentsInitializerWorldGen.Init);
             CoreComponentsInitializer.Init(ref structComponentsContainer);
 
