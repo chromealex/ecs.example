@@ -1,0 +1,3 @@
+[submodule "Assets/ecs-submodule"]
+	path = Assets/ecs-submodule
+	url = https://chromealex@github.com/chromealex/ecs-submodule.git
