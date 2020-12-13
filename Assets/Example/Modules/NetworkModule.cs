@@ -459,8 +459,6 @@ namespace Example.Modules {
 
     public class FSSerializer : ME.ECS.Network.ISerializer {
 
-        private readonly FullSerializer.fsSerializer fsSerializer = new FullSerializer.fsSerializer();
-
         public byte[] SerializeWorld(World.WorldState worldState) {
             
             return ME.ECS.Serializer.Serializer.Pack(worldState);
