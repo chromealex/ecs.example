@@ -15,3 +15,7 @@ ME.ECS Game Example (https://github.com/chromealex/ecs)
 > Sometimes nothing happens on "Play" if we start 2 builds at the same time
 
 It is happens because each build instance runs its own room, just turn off one of the build instance and start it again.
+
+> Photon popup warning
+
+It is happenning because Photon creates new PhotonServerSettings.asset file automatically, you need to remove one from your project and set up photon AppId.
